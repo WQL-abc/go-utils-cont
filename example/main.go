@@ -1,7 +1,7 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"time"
 
 	"github.com/go-utils/cont"
@@ -13,27 +13,35 @@ func main() {
 		ex1 = []string{"1", "2", "3"}
 		ex2 = []int{1, 2, 3}
 		ex3 = "123"
-		ex4 = map[string]interface{}{"a": "1", "b": "2", "c": "3", "d": now}
+		ex4 = map[string]interface{}{"a": "1", "b": 2, "c": "3", "d": now}
 	)
 
-	log.Println(ex1)
-	log.Println(ex2)
-	log.Println(ex3)
-	log.Println(ex4)
+	fmt.Printf("%#v\n", ex1)
+	fmt.Printf("%#v\n", ex2)
+	fmt.Printf("%#v\n", ex3)
+	fmt.Printf("%#v\n", ex4)
 
 	if cont.Contains(ex1, "1") {
-		log.Println("ex1: OK!")
+		fmt.Println("ex1: OK!")
 	}
 
 	if cont.Contains(ex2, 1) {
-		log.Println("ex2: OK!")
+		fmt.Println("ex2: OK!")
 	}
 
 	if cont.Contains(ex3, "1") {
-		log.Println("ex3: OK!")
+		fmt.Println("ex3: OK!")
 	}
 
 	if cont.Contains(ex4, now) {
-		log.Println("ex4: OK!")
+		fmt.Println("ex4: OK! - time.Time")
+	}
+
+	if cont.Contains(ex4, 2) {
+		fmt.Println("ex4: OK! - int")
+	}
+
+	if cont.Contains(ex4, "c") {
+		fmt.Println("ex4: OK! - string")
 	}
 }
