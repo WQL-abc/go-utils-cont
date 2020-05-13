@@ -57,6 +57,7 @@ func ExampleContainsMap() {
 	if cont.Contains(contents, "c") {
 		fmt.Println("Map: OK! - string")
 	}
+	// nolint:lll
 	// Output: map[string]interface {}{"a":"1", "b":2, "c":"3", "d":time.Time{wall:0x1234567890, ext:xxx, loc:(*time.Location)(0x123456789)}}
 	// Output: Map: OK! - time.Time
 	// Output: Map: OK! - int
