@@ -61,4 +61,4 @@ Check [Go Playground](https://play.golang.org/p/XW1jxv-PNPl)
 `string`, `slice`, `array`, `map`
 
 # License
-MIT
+[MIT](./LICENSE)
